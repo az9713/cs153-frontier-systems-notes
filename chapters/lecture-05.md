@@ -1,0 +1,179 @@
+# 5. Garry Tan and Diana Hu: the AI-native company
+
+**Garry Tan and Diana Hu · Playlist position 5 · [Recording](https://www.youtube.com/watch?v=Lri2LNYtERM)**
+
+A solo founder wants to turn a folder of research articles into a useful private knowledge service. An assistant can fetch permitted documents, extract claims, attach source links, and propose a synthesis. After the first impressive demonstration, the founder discovers duplicate records, stale claims, and summaries that cannot be traced to their sources. Producing more text has not yet produced a dependable company.
+
+The recurring system has a request, a resolver that selects a procedure, an execution environment, an evidence store, and a verifier. A customer outcome completes the loop by revealing whether the saved artifact was useful. These objects connect the lecture's discussion of standards, coding productivity, skills, memory, and organizational feedback. Productivity multipliers remain speaker claims; the formal models and case study are original extensions.
+
+## 1. Standards reduce coordination costs [02:18](https://www.youtube.com/watch?v=Lri2LNYtERM&t=138s)
+
+The introduction connects compute bottlenecks to the standardization of startup financing. The SAFE is presented as an example of an institutional interface that reduced repeated negotiation. **Historical correction:** YC's [own documentation](https://www.ycombinator.com/safe) credits Carolynn Levy with creating the SAFE in 2013. The introduction's broad attribution to YC's founders should not obscure that authorship.
+
+A **standard interface** specifies how parties interact while allowing their internal implementations to differ. Standardization can lower negotiation and integration costs, but it can also conceal important differences. A compute agreement, for example, needs to specify delivery time, device characteristics, usable software, reliability, and remedies. A generic unit of compute is not as homogeneous as a casual electricity analogy suggests.
+
+For the research service, define an article record before automating ingestion. It needs a source identifier, retrieval time, content hash, access scope, and separate fields for extracted text and interpretation. An ingestion component can change internally while still producing that record. A synthesis component can consume it without knowing how the document was fetched. The interface reduces the number of assumptions the two components must negotiate repeatedly.
+
+An interface also has semantics. A field named `verified` is ambiguous unless it specifies what was checked: a successful download, a matching hash, a correct citation, or a true scientific claim. Standardizing an ambiguous field distributes the ambiguity more efficiently. Require a named check and supporting evidence rather than a generic confidence flag. This is how a modest schema can reduce coordination cost while preserving meaningful distinctions.
+
+## 2. A productivity anecdote is not a multiplier law [09:08](https://www.youtube.com/watch?v=Lri2LNYtERM&t=548s)
+
+Tan recounts rebuilding software related to his earlier startup rapidly with coding agents. He describes GStack and emphasizes tests, review procedures, and paying users. Reimplementation with known requirements differs from original discovery, and lines of generated code differ from useful maintained functionality. The lecture itself acknowledges that line count alone can be misleading.
+
+**Teaching definition.** For a fixed task and quality threshold, define productivity gain as $G=T_0/T_1$, where $T_0$ is baseline total labor time and $T_1$ assisted total labor time. Include requirement clarification, debugging, review, deployment, and subsequent repair. If outputs differ materially, a ratio of times is not a controlled comparison.
+
+Suppose coding is 40% of a project's original effort and becomes 20 times faster. If the other 60% is unchanged, total time becomes $0.6+0.4/20=0.62$ of baseline. The overall speedup is $1/0.62\approx1.61$, not 20. This is an Amdahl-style teaching calculation. It does not deny large gains; it identifies the other constraints that must also change to obtain them.
+
+**Research extension.** [Becker et al.'s randomized study of experienced open-source developers](https://arxiv.org/abs/2507.09089) found slower completion with the early-2025 tools and tasks studied. That result does not settle performance of later tools or different workflows. Together with the lecture's positive anecdotes, it motivates measuring actual completion under your own conditions rather than treating either result as universal.
+
+### Deriving the productivity ceiling
+
+Let $f\in[0,1]$ be the fraction of baseline effort in the accelerated activity and $s>0$ its speedup. Normalize baseline time to one. Unchanged work takes $1-f$, accelerated work takes $f/s$, so overall gain is $G=1/(1-f+f/s)$. The crucial assumption is that the remaining work stays unchanged. If generated code increases review or repair, add that effort before taking the reciprocal.
+
+As $s$ grows without bound, $G$ approaches $1/(1-f)$ for $f<1$. With only 40% of time in coding, eliminating coding time entirely cannot improve total time by more than about 1.67. A measured twentyfold end-to-end gain would therefore require other changes: reused requirements, fewer features, a different quality threshold, or improvements in the supposedly unchanged work. This is an accounting inference, not a denial that a redesigned workflow can improve substantially.
+
+For the article service, baseline time might be 20 minutes retrieving documents, 20 extracting facts, and 60 checking and synthesizing them. Making extraction twenty times faster reduces total time to 81 minutes, a gain of only 1.23. If retrieval is also automated, the limit moves. Record these stages rather than asking the founder for a single impression of speed. Experienced users can misestimate time saved, which is one reason randomized task measurements and the lecture's anecdotes answer different questions.
+
+## 3. Put deterministic work in code and judgment in procedures [18:03](https://www.youtube.com/watch?v=Lri2LNYtERM&t=1083s)
+
+Tan distinguishes operations that should be explicit code from operations that benefit from model interpretation. His dinner-seating example illustrates scale: a model may reason about a small group, but a large event needs structured constraints and algorithmic support. His time-zone example shows why a current time should come from a clock and conversion rules rather than a model's guess.
+
+A **skill** is a reusable task procedure with entry conditions, steps, tools, and an expected result. A **resolver** selects which procedure to load for a request. A **schema** defines the structure and constraints of stored data. None is interchangeable with a model weight update.
+
+**Worked formulation.** Let $x_{it}\in\{0,1\}$ indicate whether guest $i$ sits at table $t$. Require $\sum_tx_{it}=1$ for each guest and $\sum_ix_{it}\le c_t$ for capacity $c_t$. Let $s_{ij}$ be a model-assisted compatibility score for guests $i,j$. An objective can reward compatible pairs seated together:
+
+$$\max_x\sum_t\sum_{i<j}s_{ij}x_{it}x_{jt}.$$
+
+The model may help estimate $s_{ij}$ from appropriate, consented information; a solver enforces capacities and assignments. Scores can encode bias or unsupported assumptions, so human review remains relevant. This separation allows a soft judgment to inform a hard feasibility problem without asking generated prose to guarantee combinatorial correctness.
+
+The summation over tables requires each guest to appear exactly once; the capacity inequalities impose physical feasibility. The objective rewards pairs sharing a table. Its products $x_{it}x_{jt}$ make it a quadratic binary optimization problem. A high objective value does not excuse violating a constraint. Conversely, a feasible assignment need not maximize compatibility. Keeping feasibility and preference separate makes both checks easier to understand.
+
+In the research service, analogous deterministic checks include unique identifiers, valid source locations, and a content hash that matches the saved bytes. A model can propose topic labels and identify a possible disagreement between papers. It cannot establish the truth of a scientific claim merely by generating a plausible paragraph. The procedure should therefore produce both a proposed synthesis and a list of supporting evidence that a separate verification step can inspect.
+
+### Turn a constraint into a checker
+
+The seating problem makes the difference between proposing and verifying concrete. A proposal is a list of guest-table pairs. To verify feasibility, count each guest exactly once, reject unknown guests and tables, and compare each table's occupancy with its capacity. This checks the two constraints of the binary model without solving the preference-optimization problem. A poor but feasible seating plan should pass this checker; judging compatibility is a separate operation.
+
+```python
+def feasible_seating(guests, assignments, capacities):
+    required, seen = set(guests), set()
+    counts = {table: 0 for table in capacities}
+    for guest, table in assignments:
+        if guest not in required or guest in seen or table not in counts:
+            return False
+        seen.add(guest)
+        counts[table] += 1
+    return seen == required and all(
+        count <= capacities[table] for table, count in counts.items()
+    )
+
+
+guests = {"Ada", "Bo", "Cy"}
+capacity = {1: 2, 2: 1}
+assert feasible_seating(guests, [("Ada", 1), ("Bo", 1), ("Cy", 2)],
+                        capacity)
+assert not feasible_seating(guests, [("Ada", 1), ("Bo", 1), ("Cy", 1)],
+                            capacity)
+assert not feasible_seating(guests, [("Ada", 1), ("Ada", 2)], capacity)
+print("Seating feasibility checks passed")
+```
+
+The function takes trusted unique guest identifiers, a proposed assignment sequence, and nonnegative table capacities. It returns a Boolean and has no external effects. It assumes input records have the stated pair structure; schema validation belongs before this semantic check. The examples distinguish success, overcapacity, and duplicate/missing guests. The chapter runner executes this block as well as the probability calculation.
+
+The research service can use the same pattern for article records. A model proposes a record; deterministic code checks required fields, known source identifiers, duplicate keys, and allowed destinations. Those checks cannot prove that the proposed scientific claim follows from the article. Add a source-comparison procedure for that separate property. A checker is useful precisely because its guarantee is narrow enough to test.
+
+## 4. Reuse requires testing the trigger as well as the procedure [23:03](https://www.youtube.com/watch?v=Lri2LNYtERM&t=1383s)
+
+The lecture describes loading instructions only when relevant, then turning a successful one-off task into a reusable procedure. Tan emphasizes several different checks: code tests, skill evaluations, integration tests, trigger tests, and end-to-end checks. A procedure can work when explicitly invoked yet never be selected when a real user needs it.
+
+Let $p_r$ be the probability that the resolver selects the appropriate skill, $p_e$ conditional execution success given correct selection, and $p_v$ conditional probability that the result is correctly verified. Under this conditional decomposition,
+
+$$P(\text{correct routed-and-verified completion})=p_rp_ep_v.$$
+
+This multiplication is a chain rule for the defined sequence, not an assumption that all stages are independent. With $p_r=0.9$, $p_e=0.95$, and $p_v=0.98$, the result is 0.8379. Improving execution to 0.99 yields 0.8732; improving routing to 0.99 while keeping execution at 0.95 yields 0.9217. The larger opportunity is in routing in this example.
+
+Test negative triggers too. A skill that activates for every request has excellent recall and terrible precision. If it can create external effects, incorrect activation can be more costly than a missed opportunity.
+
+### The probability tree behind a successful procedure
+
+Define three events: correct routing, successful execution conditional on correct routing, and correct verification conditional on both earlier events. Multiplying their conditional probabilities gives the probability that all three occur. This follows from the probability chain rule, so no independence assumption is needed. It is not the probability of every possible successful outcome: an incorrectly routed request might succeed accidentally through another path. The event being measured must match the formula.
+
+```python
+def verified_path_probability(routing, execution, verification):
+    probabilities = (routing, execution, verification)
+    if any(not 0 <= p <= 1 for p in probabilities):
+        raise ValueError("Probabilities must lie in [0, 1]")
+    return routing * execution * verification
+
+
+baseline = verified_path_probability(0.90, 0.95, 0.98)
+better_execution = verified_path_probability(0.90, 0.99, 0.98)
+better_routing = verified_path_probability(0.99, 0.95, 0.98)
+assert better_routing > better_execution > baseline
+assert verified_path_probability(0, 1, 1) == 0
+print(tuple(round(p, 4) for p in
+            (baseline, better_execution, better_routing)))
+```
+
+Run `python labs/check_chapters.py 5` for `(0.8379, 0.8732, 0.9217)`. The function accepts conditional probabilities for the specified path and returns its joint probability. It has no external effects and does not estimate those probabilities. The zero-routing check confirms that perfect execution cannot rescue a path that is never selected.
+
+For the recurring service, test requests such as “save this paper,” “compare these two saved papers,” and “tell me whether I already saved this.” Only the first should initiate ingestion. A resolver that ingests on all three can inflate activity while creating duplicates. Construct held-out paraphrases and nearby negative cases; tests that copy the skill's exact trigger text measure less than real routing performance.
+
+## 5. Memory is an evidence system [27:02](https://www.youtube.com/watch?v=Lri2LNYtERM&t=1622s)
+
+Tan describes adding search, relationships, and provenance distinctions to a personal knowledge system. He wants to distinguish a person's hunch from established knowledge and observe how beliefs change. The lecture's comparison with an organization is useful: routing resembles assignment of responsibility; filing rules resemble information management; checks resemble audit. The analogy does not make an agent a legal employee or guarantee organizational performance.
+
+**Teaching schema.** Store a claim with its author, source, observation time, scope, confidence basis, and status. Separate the time an event occurred from the time your system learned about it. A correction should supersede an earlier record without erasing the reason the system previously believed it. Retrieval then becomes the selection of evidence appropriate to a question, rather than merely finding semantically similar text.
+
+For example, “Model A passed test X on date Y” is a bounded observation. “Model A is best” is a comparative claim requiring a workload, competitor set, date, and metric. A memory system that collapses the first into the second has manufactured confidence.
+
+For a paper revised after ingestion, preserve the earlier version and link a superseding record. A content hash distinguishes byte sequences but does not determine which version is scientifically correct. An event timestamp identifies when something happened; a retrieval timestamp identifies when the system obtained evidence. Confusing them can make a later correction appear to have been known earlier.
+
+Retrieval should answer a scoped question. “What did this model achieve on this benchmark in this release?” needs a different evidence set from “Which method should I use now?” The second question requires comparison, current constraints, and a decision criterion. Semantic similarity is a retrieval aid, not an evidentiary rule. The store should preserve uncertainty and disagreements so that retrieval cannot turn the most frequently repeated claim into an established result.
+
+## 6. Closing the organizational feedback loop [31:30](https://www.youtube.com/watch?v=Lri2LNYtERM&t=1890s)
+
+Hu contrasts delayed, lossy organizational information with systems that capture artifacts and feed observed outcomes back into decisions. She identifies builders, directly responsible individuals, and people exploring new tools. At [37:20](https://www.youtube.com/watch?v=Lri2LNYtERM&t=2240s), the emphasis shifts to judgment expressed through evaluations and customer outcomes.
+
+**Control-theory correction.** Feedback does not automatically make a system stable. Let $e_t$ be deviation from a desired outcome at step $t$, $a$ its passive persistence multiplier, $u_t$ an intervention, and $b$ its effect per unit intervention. Choose feedback gain $K$ so that $u_t=Ke_t$. Units must make $bu_t$ comparable to $e_t$. An illustrative linear model is $e_{t+1}=ae_t-bu_t$. Substitution gives the closed-loop dynamics:
+
+$$e_{t+1}=(a-bK)e_t.$$
+
+The error shrinks only when $|a-bK|<1$. With $a=b=1$, gain $K=0.5$ halves error each step; $K=2.5$ produces a factor of -1.5 and oscillatory divergence. Real organizational feedback is delayed, noisy, and multidimensional. Capturing every message is not enough, and broad access can conflict with confidentiality. Use authorized, relevant context and a measured intervention policy.
+
+The stability condition follows by iterating: after $t$ updates, $e_t=(a-bK)^t e_0$. The magnitude tends to zero for every finite initial error exactly when the multiplier's magnitude is below one. A negative multiplier causes alternating signs, which can be harmless if its magnitude is small and destructive if it grows. The model distinguishes the presence of feedback from a well-tuned response to feedback.
+
+For the article service, suppose every complaint leads to a large prompt rewrite. A complaint about missing detail can produce excessive length; the next complaint about length can produce missing qualifications. This resembles high-gain oscillation, but the scalar equation is only an analogy unless error and interventions are measured on a common scale. A more practical method changes one mechanism, reruns a fixed regression set, and also tests new cases that were not used to design the change.
+
+The [GStack repository](https://github.com/garrytan/gstack) is a first-party implementation reference for the lecture's reusable-procedure discussion. Inspect a pinned revision when studying its mechanisms. A repository can show how a procedure is implemented; it cannot establish a universal productivity multiplier. The case company needs its own trace from trigger through saved evidence to customer outcome.
+
+At [42:18](https://www.youtube.com/watch?v=Lri2LNYtERM&t=2538s), Hu recommends deeply understanding a painful customer workflow. The startup examples and growth numbers are illustrations from the speakers, not a representative sample or a promise. The most reusable lesson is to turn observed failure into a regression case and check that a proposed improvement helps new customers as well as the remembered example.
+
+## Limits
+
+The probability product concerns a named success path, the speedup formula assumes comparable output, and the scalar feedback law omits delay and noise. The organizational analogy does not turn software into an employee or settle governance. A useful AI-native workflow makes its responsibilities inspectable: what proposes, what executes, what evidence persists, and what establishes success.
+
+## Exercises and worked solutions
+
+1. If 80% of work becomes ten times faster and the remainder is unchanged, what is the overall gain?
+2. Why can three models agreeing on a result fail to provide three independent pieces of evidence?
+3. For $a=1.1$ and $b=1$, find the gains $K$ that stabilize the simple error model.
+4. Design a reusable article-saving skill with one deterministic and one model-assisted stage.
+
+<details><summary>Solutions and discussion</summary>
+
+1. Normalize original time to one. The unchanged 20% still takes 0.2, and the accelerated 80% takes 0.08, giving total time 0.28 and gain $1/0.28\approx3.57$. If new review adds 0.1 of baseline effort, total time becomes 0.38 and gain falls to about 2.63. A measured speedup must include that new work and preserve the output-quality requirement.
+2. If all three models rely on the same incorrect source, agreement can occur whenever that source is wrong. In the limiting counterexample their errors are identical, so three votes contain no more independent information than one. Measure joint errors against independently established outcomes. A deterministic check of the relevant property may add more evidence than another model's agreement.
+3. Stability requires $-1<1.1-K<1$. The left inequality gives $K<2.1$ and the right gives $K>0.1$. At either endpoint the error magnitude fails to contract. For $K=1.1$, the ideal model reaches zero in one step, but delay, noise, and incorrect coefficients can make that aggressive setting poor in practice.
+4. Use code to normalize the permitted URL, record retrieval time, hash stored content, and reject duplicate records. Let a model propose tags and source-linked claims in a validated schema. Test that a comparison request does not trigger ingestion, and that an ingestion request produces a retrievable record. Verify a held-out query against the saved source. Treat document instructions as data, and keep saving and publishing as distinct effects with distinct authority.
+
+</details>
+
+## Primary sources and attribution
+
+- [Stanford recording](https://www.youtube.com/watch?v=Lri2LNYtERM) — lecture architecture, anecdotes, and company claims.
+- [GStack repository](https://github.com/garrytan/gstack) — first-party implementation reference; inspect a pinned version before reproducing details.
+- [YC SAFE documentation](https://www.ycombinator.com/safe) — authorship and financial-instrument context.
+- [Becker et al. (2025), Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity](https://arxiv.org/abs/2507.09089) — empirical counterpoint with a specific population and tool period.
+
+**Coverage note.** The chapter follows standards, productivity, skills, routing, memory, organizational feedback, evaluation, and customer workflow discovery. All numerical calculations, formal models, and exercises are original teaching constructions. No claimed multiplier, growth rate, or zero-defect assertion is treated as a verified general result.

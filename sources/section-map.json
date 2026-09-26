@@ -1,0 +1,597 @@
+[
+  {
+    "chapter": 1,
+    "heading": "1. A prepared mind and a concentrated bet 00:52",
+    "anchor": "1-a-prepared-mind-and-a-concentrated-bet-0052",
+    "seconds": 52,
+    "recording": "https://www.youtube.com/watch?v=d0Pfu6B7gIM&t=52s"
+  },
+  {
+    "chapter": 1,
+    "heading": "2. The firm's learning machinery 05:31",
+    "anchor": "2-the-firms-learning-machinery-0531",
+    "seconds": 331,
+    "recording": "https://www.youtube.com/watch?v=d0Pfu6B7gIM&t=331s"
+  },
+  {
+    "chapter": 1,
+    "heading": "3. Chat, delegated work, and persistent agents 11:07",
+    "anchor": "3-chat-delegated-work-and-persistent-agents-1107",
+    "seconds": 667,
+    "recording": "https://www.youtube.com/watch?v=d0Pfu6B7gIM&t=667s"
+  },
+  {
+    "chapter": 1,
+    "heading": "4. Local compute and the meaning of unmetered 15:06",
+    "anchor": "4-local-compute-and-the-meaning-of-unmetered-1506",
+    "seconds": 906,
+    "recording": "https://www.youtube.com/watch?v=d0Pfu6B7gIM&t=906s"
+  },
+  {
+    "chapter": 1,
+    "heading": "5. From impressive capability to broadly experienced value 19:30",
+    "anchor": "5-from-impressive-capability-to-broadly-experienced-value-1930",
+    "seconds": 1170,
+    "recording": "https://www.youtube.com/watch?v=d0Pfu6B7gIM&t=1170s"
+  },
+  {
+    "chapter": 1,
+    "heading": "6. Workload-driven architecture and quantum claims 23:39",
+    "anchor": "6-workload-driven-architecture-and-quantum-claims-2339",
+    "seconds": 1419,
+    "recording": "https://www.youtube.com/watch?v=d0Pfu6B7gIM&t=1419s"
+  },
+  {
+    "chapter": 1,
+    "heading": "7. Culture, cognitive coverage, and the closing questions 35:36",
+    "anchor": "7-culture-cognitive-coverage-and-the-closing-questions-3536",
+    "seconds": 2136,
+    "recording": "https://www.youtube.com/watch?v=d0Pfu6B7gIM&t=2136s"
+  },
+  {
+    "chapter": 2,
+    "heading": "1. A research lab that became a product company 00:09",
+    "anchor": "1-a-research-lab-that-became-a-product-company-0009",
+    "seconds": 9,
+    "recording": "https://www.youtube.com/watch?v=F_7M4Hc-usM&t=9s"
+  },
+  {
+    "chapter": 2,
+    "heading": "2. What scaling establishes\u2014and what it does not 04:06",
+    "anchor": "2-what-scaling-establishesand-what-it-does-not-0406",
+    "seconds": 246,
+    "recording": "https://www.youtube.com/watch?v=F_7M4Hc-usM&t=246s"
+  },
+  {
+    "chapter": 2,
+    "heading": "3. Product discovery: API, chat, and code 11:53",
+    "anchor": "3-product-discovery-api-chat-and-code-1153",
+    "seconds": 713,
+    "recording": "https://www.youtube.com/watch?v=F_7M4Hc-usM&t=713s"
+  },
+  {
+    "chapter": 2,
+    "heading": "4. Training pipelines and automated research 17:23",
+    "anchor": "4-training-pipelines-and-automated-research-1723",
+    "seconds": 1043,
+    "recording": "https://www.youtube.com/watch?v=F_7M4Hc-usM&t=1043s"
+  },
+  {
+    "chapter": 2,
+    "heading": "5. Selling outcomes and provisioning a utility 19:57",
+    "anchor": "5-selling-outcomes-and-provisioning-a-utility-1957",
+    "seconds": 1197,
+    "recording": "https://www.youtube.com/watch?v=F_7M4Hc-usM&t=1197s"
+  },
+  {
+    "chapter": 2,
+    "heading": "6. Uneven intelligence, education, and distribution 25:45",
+    "anchor": "6-uneven-intelligence-education-and-distribution-2545",
+    "seconds": 1545,
+    "recording": "https://www.youtube.com/watch?v=F_7M4Hc-usM&t=1545s"
+  },
+  {
+    "chapter": 3,
+    "heading": "1. Trust at the boundary of technology and government 00:09",
+    "anchor": "1-trust-at-the-boundary-of-technology-and-government-0009",
+    "seconds": 9,
+    "recording": "https://www.youtube.com/watch?v=g50FHC-PzK8&t=9s"
+  },
+  {
+    "chapter": 3,
+    "heading": "2. Transparency and the Uber case 08:03",
+    "anchor": "2-transparency-and-the-uber-case-0803",
+    "seconds": 483,
+    "recording": "https://www.youtube.com/watch?v=g50FHC-PzK8&t=483s"
+  },
+  {
+    "chapter": 3,
+    "heading": "3. Personal recovery and organizational resilience 26:37",
+    "anchor": "3-personal-recovery-and-organizational-resilience-2637",
+    "seconds": 1597,
+    "recording": "https://www.youtube.com/watch?v=g50FHC-PzK8&t=1597s"
+  },
+  {
+    "chapter": 3,
+    "heading": "4. Generated code shifts the review constraint 44:11",
+    "anchor": "4-generated-code-shifts-the-review-constraint-4411",
+    "seconds": 2651,
+    "recording": "https://www.youtube.com/watch?v=g50FHC-PzK8&t=2651s"
+  },
+  {
+    "chapter": 3,
+    "heading": "5. Quantum risk, release policy, and coordination 49:35",
+    "anchor": "5-quantum-risk-release-policy-and-coordination-4935",
+    "seconds": 2975,
+    "recording": "https://www.youtube.com/watch?v=g50FHC-PzK8&t=2975s"
+  },
+  {
+    "chapter": 4,
+    "heading": "1. Capacity is an input, not an outcome 02:06",
+    "anchor": "1-capacity-is-an-input-not-an-outcome-0206",
+    "seconds": 126,
+    "recording": "https://www.youtube.com/watch?v=VeTqsCpcDgg&t=126s"
+  },
+  {
+    "chapter": 4,
+    "heading": "2. Reliability is a workload-dependent resource tradeoff 09:42",
+    "anchor": "2-reliability-is-a-workload-dependent-resource-tradeoff-0942",
+    "seconds": 582,
+    "recording": "https://www.youtube.com/watch?v=VeTqsCpcDgg&t=582s"
+  },
+  {
+    "chapter": 4,
+    "heading": "3. System balance and moving bottlenecks 14:08",
+    "anchor": "3-system-balance-and-moving-bottlenecks-1408",
+    "seconds": 848,
+    "recording": "https://www.youtube.com/watch?v=VeTqsCpcDgg&t=848s"
+  },
+  {
+    "chapter": 4,
+    "heading": "4. Procurement is planning under uncertainty 20:31",
+    "anchor": "4-procurement-is-planning-under-uncertainty-2031",
+    "seconds": 1231,
+    "recording": "https://www.youtube.com/watch?v=VeTqsCpcDgg&t=1231s"
+  },
+  {
+    "chapter": 4,
+    "heading": "5. Optical reconfiguration and collective communication 31:31",
+    "anchor": "5-optical-reconfiguration-and-collective-communication-3131",
+    "seconds": 1891,
+    "recording": "https://www.youtube.com/watch?v=VeTqsCpcDgg&t=1891s"
+  },
+  {
+    "chapter": 4,
+    "heading": "6. Specialization, hardware lifetime, and community constraints 37:42",
+    "anchor": "6-specialization-hardware-lifetime-and-community-constraints-3742",
+    "seconds": 2262,
+    "recording": "https://www.youtube.com/watch?v=VeTqsCpcDgg&t=2262s"
+  },
+  {
+    "chapter": 5,
+    "heading": "1. Standards reduce coordination costs 02:18",
+    "anchor": "1-standards-reduce-coordination-costs-0218",
+    "seconds": 138,
+    "recording": "https://www.youtube.com/watch?v=Lri2LNYtERM&t=138s"
+  },
+  {
+    "chapter": 5,
+    "heading": "2. A productivity anecdote is not a multiplier law 09:08",
+    "anchor": "2-a-productivity-anecdote-is-not-a-multiplier-law-0908",
+    "seconds": 548,
+    "recording": "https://www.youtube.com/watch?v=Lri2LNYtERM&t=548s"
+  },
+  {
+    "chapter": 5,
+    "heading": "3. Put deterministic work in code and judgment in procedures 18:03",
+    "anchor": "3-put-deterministic-work-in-code-and-judgment-in-procedures-1803",
+    "seconds": 1083,
+    "recording": "https://www.youtube.com/watch?v=Lri2LNYtERM&t=1083s"
+  },
+  {
+    "chapter": 5,
+    "heading": "4. Reuse requires testing the trigger as well as the procedure 23:03",
+    "anchor": "4-reuse-requires-testing-the-trigger-as-well-as-the-procedure-2303",
+    "seconds": 1383,
+    "recording": "https://www.youtube.com/watch?v=Lri2LNYtERM&t=1383s"
+  },
+  {
+    "chapter": 5,
+    "heading": "5. Memory is an evidence system 27:02",
+    "anchor": "5-memory-is-an-evidence-system-2702",
+    "seconds": 1622,
+    "recording": "https://www.youtube.com/watch?v=Lri2LNYtERM&t=1622s"
+  },
+  {
+    "chapter": 5,
+    "heading": "6. Closing the organizational feedback loop 31:30",
+    "anchor": "6-closing-the-organizational-feedback-loop-3130",
+    "seconds": 1890,
+    "recording": "https://www.youtube.com/watch?v=Lri2LNYtERM&t=1890s"
+  },
+  {
+    "chapter": 6,
+    "heading": "1. Co-design begins with the workload 01:04",
+    "anchor": "1-co-design-begins-with-the-workload-0104",
+    "seconds": 64,
+    "recording": "https://www.youtube.com/watch?v=tsQB0n0YV3k&t=64s"
+  },
+  {
+    "chapter": 6,
+    "heading": "2. Learning and the scope of open models 13:41",
+    "anchor": "2-learning-and-the-scope-of-open-models-1341",
+    "seconds": 821,
+    "recording": "https://www.youtube.com/watch?v=tsQB0n0YV3k&t=821s"
+  },
+  {
+    "chapter": 6,
+    "heading": "3. Why low FLOP utilization can accompany good performance 26:07",
+    "anchor": "3-why-low-flop-utilization-can-accompany-good-performance-2607",
+    "seconds": 1567,
+    "recording": "https://www.youtube.com/watch?v=tsQB0n0YV3k&t=1567s"
+  },
+  {
+    "chapter": 6,
+    "heading": "4. Prefill, decode, and memory 33:03",
+    "anchor": "4-prefill-decode-and-memory-3303",
+    "seconds": 1983,
+    "recording": "https://www.youtube.com/watch?v=tsQB0n0YV3k&t=1983s"
+  },
+  {
+    "chapter": 6,
+    "heading": "5. Agents put CPUs and latency back into the loop 35:40",
+    "anchor": "5-agents-put-cpus-and-latency-back-into-the-loop-3540",
+    "seconds": 2140,
+    "recording": "https://www.youtube.com/watch?v=tsQB0n0YV3k&t=2140s"
+  },
+  {
+    "chapter": 6,
+    "heading": "6. Energy, access, and strategic optionality 38:24",
+    "anchor": "6-energy-access-and-strategic-optionality-3824",
+    "seconds": 2304,
+    "recording": "https://www.youtube.com/watch?v=tsQB0n0YV3k&t=2304s"
+  },
+  {
+    "chapter": 7,
+    "heading": "1. Follow the dependency chain 00:08",
+    "anchor": "1-follow-the-dependency-chain-0008",
+    "seconds": 8,
+    "recording": "https://www.youtube.com/watch?v=wisccQYTRQc&t=8s"
+  },
+  {
+    "chapter": 7,
+    "heading": "2. Stranded power and the difference between energy and firm capacity 12:55",
+    "anchor": "2-stranded-power-and-the-difference-between-energy-and-firm-capacity-1255",
+    "seconds": 775,
+    "recording": "https://www.youtube.com/watch?v=wisccQYTRQc&t=775s"
+  },
+  {
+    "chapter": 7,
+    "heading": "3. Nuclear generation and fuel are different industries 16:03",
+    "anchor": "3-nuclear-generation-and-fuel-are-different-industries-1603",
+    "seconds": 963,
+    "recording": "https://www.youtube.com/watch?v=wisccQYTRQc&t=963s"
+  },
+  {
+    "chapter": 7,
+    "heading": "4. Infrastructure primitives and staged learning 21:48",
+    "anchor": "4-infrastructure-primitives-and-staged-learning-2148",
+    "seconds": 1308,
+    "recording": "https://www.youtube.com/watch?v=wisccQYTRQc&t=1308s"
+  },
+  {
+    "chapter": 7,
+    "heading": "5. Funding, execution, and what an award proves 32:08",
+    "anchor": "5-funding-execution-and-what-an-award-proves-3208",
+    "seconds": 1928,
+    "recording": "https://www.youtube.com/watch?v=wisccQYTRQc&t=1928s"
+  },
+  {
+    "chapter": 7,
+    "heading": "6. Timelines, alternative paths, and the closing questions 42:36",
+    "anchor": "6-timelines-alternative-paths-and-the-closing-questions-4236",
+    "seconds": 2556,
+    "recording": "https://www.youtube.com/watch?v=wisccQYTRQc&t=2556s"
+  },
+  {
+    "chapter": 8,
+    "heading": "1. Two customers, one firm 04:20",
+    "anchor": "1-two-customers-one-firm-0420",
+    "seconds": 260,
+    "recording": "https://www.youtube.com/watch?v=B8NvdfssGac&t=260s"
+  },
+  {
+    "chapter": 8,
+    "heading": "2. Network effects require a mechanism 12:01",
+    "anchor": "2-network-effects-require-a-mechanism-1201",
+    "seconds": 721,
+    "recording": "https://www.youtube.com/watch?v=B8NvdfssGac&t=721s"
+  },
+  {
+    "chapter": 8,
+    "heading": "3. Bootstrapping the second side 15:00",
+    "anchor": "3-bootstrapping-the-second-side-1500",
+    "seconds": 900,
+    "recording": "https://www.youtube.com/watch?v=B8NvdfssGac&t=900s"
+  },
+  {
+    "chapter": 8,
+    "heading": "4. Cheaper code changes the location of scarcity 20:01",
+    "anchor": "4-cheaper-code-changes-the-location-of-scarcity-2001",
+    "seconds": 1201,
+    "recording": "https://www.youtube.com/watch?v=B8NvdfssGac&t=1201s"
+  },
+  {
+    "chapter": 8,
+    "heading": "5. Culture as observable behavior 35:00",
+    "anchor": "5-culture-as-observable-behavior-3500",
+    "seconds": 2100,
+    "recording": "https://www.youtube.com/watch?v=B8NvdfssGac&t=2100s"
+  },
+  {
+    "chapter": 8,
+    "heading": "6. Mission boundaries and option preservation 43:01",
+    "anchor": "6-mission-boundaries-and-option-preservation-4301",
+    "seconds": 2581,
+    "recording": "https://www.youtube.com/watch?v=B8NvdfssGac&t=2581s"
+  },
+  {
+    "chapter": 8,
+    "heading": "7. Separate strategy from sweeping claims 48:00",
+    "anchor": "7-separate-strategy-from-sweeping-claims-4800",
+    "seconds": 2880,
+    "recording": "https://www.youtube.com/watch?v=B8NvdfssGac&t=2880s"
+  },
+  {
+    "chapter": 9,
+    "heading": "1. Product management changes with company stage 04:12",
+    "anchor": "1-product-management-changes-with-company-stage-0412",
+    "seconds": 252,
+    "recording": "https://www.youtube.com/watch?v=BQrJ4lHAjhc&t=252s"
+  },
+  {
+    "chapter": 9,
+    "heading": "2. An internal problem can masquerade as a customer problem 09:47",
+    "anchor": "2-an-internal-problem-can-masquerade-as-a-customer-problem-0947",
+    "seconds": 587,
+    "recording": "https://www.youtube.com/watch?v=BQrJ4lHAjhc&t=587s"
+  },
+  {
+    "chapter": 9,
+    "heading": "3. Iteration speed must produce information 12:55",
+    "anchor": "3-iteration-speed-must-produce-information-1255",
+    "seconds": 775,
+    "recording": "https://www.youtube.com/watch?v=BQrJ4lHAjhc&t=775s"
+  },
+  {
+    "chapter": 9,
+    "heading": "4. AI summaries compress observations, not responsibility 14:56",
+    "anchor": "4-ai-summaries-compress-observations-not-responsibility-1456",
+    "seconds": 896,
+    "recording": "https://www.youtube.com/watch?v=BQrJ4lHAjhc&t=896s"
+  },
+  {
+    "chapter": 9,
+    "heading": "5. Judgment as a value-of-information problem 24:15",
+    "anchor": "5-judgment-as-a-value-of-information-problem-2415",
+    "seconds": 1455,
+    "recording": "https://www.youtube.com/watch?v=BQrJ4lHAjhc&t=1455s"
+  },
+  {
+    "chapter": 9,
+    "heading": "6. Sunk costs, organizational scale, and career learning 34:38",
+    "anchor": "6-sunk-costs-organizational-scale-and-career-learning-3438",
+    "seconds": 2078,
+    "recording": "https://www.youtube.com/watch?v=BQrJ4lHAjhc&t=2078s"
+  },
+  {
+    "chapter": 10,
+    "heading": "1. Differentiable representations make learning possible 03:01",
+    "anchor": "1-differentiable-representations-make-learning-possible-0301",
+    "seconds": 181,
+    "recording": "https://www.youtube.com/watch?v=6nUl_w5W9Wk&t=181s"
+  },
+  {
+    "chapter": 10,
+    "heading": "2. Data availability can overturn an elegant representation 06:00",
+    "anchor": "2-data-availability-can-overturn-an-elegant-representation-0600",
+    "seconds": 360,
+    "recording": "https://www.youtube.com/watch?v=6nUl_w5W9Wk&t=360s"
+  },
+  {
+    "chapter": 10,
+    "heading": "3. A download is not a preference label 10:02",
+    "anchor": "3-a-download-is-not-a-preference-label-1002",
+    "seconds": 602,
+    "recording": "https://www.youtube.com/watch?v=6nUl_w5W9Wk&t=602s"
+  },
+  {
+    "chapter": 10,
+    "heading": "4. Unified models and competing decompositions 16:00",
+    "anchor": "4-unified-models-and-competing-decompositions-1600",
+    "seconds": 960,
+    "recording": "https://www.youtube.com/watch?v=6nUl_w5W9Wk&t=960s"
+  },
+  {
+    "chapter": 10,
+    "heading": "5. A world model must be evaluated on consequences 18:02",
+    "anchor": "5-a-world-model-must-be-evaluated-on-consequences-1802",
+    "seconds": 1082,
+    "recording": "https://www.youtube.com/watch?v=6nUl_w5W9Wk&t=1082s"
+  },
+  {
+    "chapter": 10,
+    "heading": "6. Skills, harnesses, memory, and data boundaries 21:00",
+    "anchor": "6-skills-harnesses-memory-and-data-boundaries-2100",
+    "seconds": 1260,
+    "recording": "https://www.youtube.com/watch?v=6nUl_w5W9Wk&t=1260s"
+  },
+  {
+    "chapter": 10,
+    "heading": "7. Creativity, architectural forecasts, and causal humility 40:00",
+    "anchor": "7-creativity-architectural-forecasts-and-causal-humility-4000",
+    "seconds": 2400,
+    "recording": "https://www.youtube.com/watch?v=6nUl_w5W9Wk&t=2400s"
+  },
+  {
+    "chapter": 11,
+    "heading": "1. Compression as a research advantage 06:36",
+    "anchor": "1-compression-as-a-research-advantage-0636",
+    "seconds": 396,
+    "recording": "https://www.youtube.com/watch?v=CBaLU0dDEY8&t=396s"
+  },
+  {
+    "chapter": 11,
+    "heading": "2. What denoising training actually learns 11:54",
+    "anchor": "2-what-denoising-training-actually-learns-1154",
+    "seconds": 714,
+    "recording": "https://www.youtube.com/watch?v=CBaLU0dDEY8&t=714s"
+  },
+  {
+    "chapter": 11,
+    "heading": "3. Editing is conditional generation with preservation constraints 20:21",
+    "anchor": "3-editing-is-conditional-generation-with-preservation-constraints-2021",
+    "seconds": 1221,
+    "recording": "https://www.youtube.com/watch?v=CBaLU0dDEY8&t=1221s"
+  },
+  {
+    "chapter": 11,
+    "heading": "4. Observation, action, and physical verification 31:56",
+    "anchor": "4-observation-action-and-physical-verification-3156",
+    "seconds": 1916,
+    "recording": "https://www.youtube.com/watch?v=CBaLU0dDEY8&t=1916s"
+  },
+  {
+    "chapter": 11,
+    "heading": "5. Open weights and subjective evaluation 37:23",
+    "anchor": "5-open-weights-and-subjective-evaluation-3723",
+    "seconds": 2243,
+    "recording": "https://www.youtube.com/watch?v=CBaLU0dDEY8&t=2243s"
+  },
+  {
+    "chapter": 11,
+    "heading": "6. Flow matching and Self-Flow 41:25",
+    "anchor": "6-flow-matching-and-self-flow-4125",
+    "seconds": 2485,
+    "recording": "https://www.youtube.com/watch?v=CBaLU0dDEY8&t=2485s"
+  },
+  {
+    "chapter": 11,
+    "heading": "7. Distillation changes the inference budget 50:01",
+    "anchor": "7-distillation-changes-the-inference-budget-5001",
+    "seconds": 3001,
+    "recording": "https://www.youtube.com/watch?v=CBaLU0dDEY8&t=3001s"
+  },
+  {
+    "chapter": 11,
+    "heading": "8. Explicit and implicit geometry 57:07",
+    "anchor": "8-explicit-and-implicit-geometry-5707",
+    "seconds": 3427,
+    "recording": "https://www.youtube.com/watch?v=CBaLU0dDEY8&t=3427s"
+  },
+  {
+    "chapter": 12,
+    "heading": "1. Start with a tractable component of a real problem 05:01",
+    "anchor": "1-start-with-a-tractable-component-of-a-real-problem-0501",
+    "seconds": 301,
+    "recording": "https://www.youtube.com/watch?v=vfF011ko89o&t=301s"
+  },
+  {
+    "chapter": 12,
+    "heading": "2. Audio tokens connect signal processing to language modeling 11:03",
+    "anchor": "2-audio-tokens-connect-signal-processing-to-language-modeling-1103",
+    "seconds": 663,
+    "recording": "https://www.youtube.com/watch?v=vfF011ko89o&t=663s"
+  },
+  {
+    "chapter": 12,
+    "heading": "3. Cascaded versus fused is a design space 22:04",
+    "anchor": "3-cascaded-versus-fused-is-a-design-space-2204",
+    "seconds": 1324,
+    "recording": "https://www.youtube.com/watch?v=vfF011ko89o&t=1324s"
+  },
+  {
+    "chapter": 12,
+    "heading": "4. Speech fluency and action correctness require separate tests 25:01",
+    "anchor": "4-speech-fluency-and-action-correctness-require-separate-tests-2501",
+    "seconds": 1501,
+    "recording": "https://www.youtube.com/watch?v=vfF011ko89o&t=1501s"
+  },
+  {
+    "chapter": 12,
+    "heading": "5. Latency is an end-to-end budget 28:00",
+    "anchor": "5-latency-is-an-end-to-end-budget-2800",
+    "seconds": 1680,
+    "recording": "https://www.youtube.com/watch?v=vfF011ko89o&t=1680s"
+  },
+  {
+    "chapter": 12,
+    "heading": "6. Pricing, trust, and deployment work 38:01",
+    "anchor": "6-pricing-trust-and-deployment-work-3801",
+    "seconds": 2281,
+    "recording": "https://www.youtube.com/watch?v=vfF011ko89o&t=2281s"
+  },
+  {
+    "chapter": 12,
+    "heading": "7. Creative control and the local/cloud boundary 59:02",
+    "anchor": "7-creative-control-and-the-localcloud-boundary-5902",
+    "seconds": 3542,
+    "recording": "https://www.youtube.com/watch?v=vfF011ko89o&t=3542s"
+  },
+  {
+    "chapter": 13,
+    "heading": "1. The stack is an interdependent production system 10:09",
+    "anchor": "1-the-stack-is-an-interdependent-production-system-1009",
+    "seconds": 609,
+    "recording": "https://www.youtube.com/watch?v=O5PfU_uDhS0&t=609s"
+  },
+  {
+    "chapter": 13,
+    "heading": "2. The training pipeline contains different optimization problems 14:07",
+    "anchor": "2-the-training-pipeline-contains-different-optimization-problems-1407",
+    "seconds": 847,
+    "recording": "https://www.youtube.com/watch?v=O5PfU_uDhS0&t=847s"
+  },
+  {
+    "chapter": 13,
+    "heading": "3. Reinforcement learning needs a specified environment 19:10",
+    "anchor": "3-reinforcement-learning-needs-a-specified-environment-1910",
+    "seconds": 1150,
+    "recording": "https://www.youtube.com/watch?v=O5PfU_uDhS0&t=1150s"
+  },
+  {
+    "chapter": 13,
+    "heading": "4. Context has several meanings 22:17",
+    "anchor": "4-context-has-several-meanings-2217",
+    "seconds": 1337,
+    "recording": "https://www.youtube.com/watch?v=O5PfU_uDhS0&t=1337s"
+  },
+  {
+    "chapter": 13,
+    "heading": "5. Sovereignty is a bundle of controls 30:32",
+    "anchor": "5-sovereignty-is-a-bundle-of-controls-3032",
+    "seconds": 1832,
+    "recording": "https://www.youtube.com/watch?v=O5PfU_uDhS0&t=1832s"
+  },
+  {
+    "chapter": 13,
+    "heading": "6. Feedback and revenue loops need separate accounting 34:57",
+    "anchor": "6-feedback-and-revenue-loops-need-separate-accounting-3457",
+    "seconds": 2097,
+    "recording": "https://www.youtube.com/watch?v=O5PfU_uDhS0&t=2097s"
+  },
+  {
+    "chapter": 13,
+    "heading": "7. Compute contracts should describe useful work 43:07",
+    "anchor": "7-compute-contracts-should-describe-useful-work-4307",
+    "seconds": 2587,
+    "recording": "https://www.youtube.com/watch?v=O5PfU_uDhS0&t=2587s"
+  },
+  {
+    "chapter": 13,
+    "heading": "8. Infrastructure cycles are hypotheses, not clocks 50:28",
+    "anchor": "8-infrastructure-cycles-are-hypotheses-not-clocks-5028",
+    "seconds": 3028,
+    "recording": "https://www.youtube.com/watch?v=O5PfU_uDhS0&t=3028s"
+  }
+]

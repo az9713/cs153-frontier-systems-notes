@@ -1,0 +1,97 @@
+{
+  "chapters": [
+    {
+      "position": 1,
+      "title": "1. Satya Nadella: building the frontier ecosystem",
+      "file": "lecture-01.html",
+      "words": 3841,
+      "description": "Ecosystems, evaluation, customer context, and local-model economics"
+    },
+    {
+      "position": 2,
+      "title": "2. Sam Altman: scale, AGI, and the future of everything",
+      "file": "lecture-02.html",
+      "words": 3439,
+      "description": "Scaling laws, compute allocation, forecasts, and demand elasticity"
+    },
+    {
+      "position": 3,
+      "title": "3. Joe Sullivan: the road ahead and resilience",
+      "file": "lecture-03.html",
+      "words": 3226,
+      "description": "Resilience, incident response, recovery objectives, and legal evidence"
+    },
+    {
+      "position": 4,
+      "title": "4. Amin Vahdat: delivering value per gigawatt",
+      "file": "lecture-04.html",
+      "words": 3302,
+      "description": "Goodput, availability, checkpoints, networks, and capacity planning"
+    },
+    {
+      "position": 5,
+      "title": "5. Garry Tan and Diana Hu: the AI-native company",
+      "file": "lecture-05.html",
+      "words": 3271,
+      "description": "AI-native work, productivity bounds, feedback loops, and founder judgment"
+    },
+    {
+      "position": 6,
+      "title": "6. Jensen Huang: the compute behind intelligence",
+      "file": "lecture-06.html",
+      "words": 3197,
+      "description": "Co-design, the Roofline model, inference memory, and agent latency"
+    },
+    {
+      "position": 7,
+      "title": "7. Scott Nolan: energy bottlenecks",
+      "file": "lecture-07.html",
+      "words": 3066,
+      "description": "Firm power, fuel supply, capacity factors, storage, and project economics"
+    },
+    {
+      "position": 8,
+      "title": "8. Ben Horowitz: venture capital as an organizational system",
+      "file": "lecture-08.html",
+      "words": 3220,
+      "description": "Network effects, venture-firm design, defensibility, and governance"
+    },
+    {
+      "position": 9,
+      "title": "9. Nikhyl Singhal: product judgment when building becomes cheap",
+      "file": "lecture-09.html",
+      "words": 4606,
+      "description": "Product discovery, causal experiments, evidence, and value of information"
+    },
+    {
+      "position": 10,
+      "title": "10. Amit Jain: unified multimodal systems and the limits of world models",
+      "file": "lecture-10.html",
+      "words": 3332,
+      "description": "Multimodal architectures, preference signals, world models, and control"
+    },
+    {
+      "position": 11,
+      "title": "11. Andreas Blattmann: visual intelligence, latent diffusion, and flow matching",
+      "file": "lecture-11.html",
+      "words": 4452,
+      "description": "Latent diffusion, flow matching, Self-Flow, editing, and distillation"
+    },
+    {
+      "position": 12,
+      "title": "12. Mati Staniszewski: voice systems, latency, and reliable action",
+      "file": "lecture-12.html",
+      "words": 3515,
+      "description": "Audio codecs, cascaded and fused systems, latency, and reliable actions"
+    },
+    {
+      "position": 13,
+      "title": "13. Anjney Midha: context, compute, capital, and culture",
+      "file": "lecture-13.html",
+      "words": 3759,
+      "description": "The whole stack, reinforcement learning, context, sovereignty, and standards"
+    }
+  ],
+  "section_timestamps": 85,
+  "references": 47
+}

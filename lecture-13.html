@@ -1,0 +1,166 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>13. Anjney Midha: context, compute, capital, and culture | CS153 Frontier Systems</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script defer src="assets/mathjax-tex-svg.js"></script>
+<script defer src="assets/code-copy.js"></script></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="shell"><a class="brand" href="index.html">CS153 · Frontier Systems</a>
+<nav aria-label="Site"><a href="index.html#chapters">Chapters</a><a href="sources.html">Sources &amp; coverage</a></nav></div></header>
+<div class="shell layout"><main id="main" class="main"><nav class="chapter-nav" aria-label="Chapter navigation"><a href="lecture-12.html">Previous chapter</a><a class="index" href="index.html">Reading guide</a><span></span></nav><p class="tiny"><a href="chapters/lecture-13.md">Editable Markdown</a> · 3,759 words including notation and references · <a href="sources.html#source-13">Transcript provenance</a></p><details class="mobile-toc"><summary>Chapter contents</summary><ul><li><a href="#1-the-stack-is-an-interdependent-production-system-1009">1. The stack is an interdependent production system 10:09</a></li><li><a href="#2-the-training-pipeline-contains-different-optimization-problems-1407">2. The training pipeline contains different optimization problems 14:07</a></li><li><a href="#3-reinforcement-learning-needs-a-specified-environment-1910">3. Reinforcement learning needs a specified environment 19:10</a></li><li><a href="#4-context-has-several-meanings-2217">4. Context has several meanings 22:17</a></li><li><a href="#5-sovereignty-is-a-bundle-of-controls-3032">5. Sovereignty is a bundle of controls 30:32</a></li><li><a href="#6-feedback-and-revenue-loops-need-separate-accounting-3457">6. Feedback and revenue loops need separate accounting 34:57</a></li><li><a href="#7-compute-contracts-should-describe-useful-work-4307">7. Compute contracts should describe useful work 43:07</a></li><li><a href="#8-infrastructure-cycles-are-hypotheses-not-clocks-5028">8. Infrastructure cycles are hypotheses, not clocks 50:28</a></li><li><a href="#limits">Limits</a></li><li><a href="#exercises">Exercises</a></li><li><a href="#primary-references-and-coverage">Primary references and coverage</a></li></ul></details><h1 id="13-anjney-midha-context-compute-capital-and-culture">13. Anjney Midha: context, compute, capital, and culture</h1>
+<p><strong>Recording:</strong> <a href="https://www.youtube.com/watch?v=O5PfU_uDhS0">Frontier Systems</a>. <strong>Reading question:</strong> What makes repeated improvement possible across the whole AI system?</p>
+<p>This is the earliest recording in the supplied playlist snapshot, but it repeatedly refers to an earlier class. It must not be mistaken for a complete record of every course meeting. The chapter provides a useful conceptual starting point even though playlist order places it last.</p>
+<p><strong>Transcript provenance:</strong> a <a href="https://github.com/c7b/CS153-Frontier-Systems-Transcripts/blob/main/13-anjney-midha-frontier-systems.md">third-party timestamped caption archive</a> supplies the text after direct retrieval was rate limited. The archive describes automatically generated captions with light formatting. Midha discloses investments and operating relationships with several organizations discussed. His framework is a participant's perspective; the models below are independent analytical extensions.</p>
+<p>A solo laboratory builds an assistant that checks dimensional consistency in mechanics derivations. It has inexpensive model access, a small collection of permissioned problems, and a symbolic unit checker. The first prototype generates many plausible solutions, but the checker accepts some physically wrong equations because their units match. More compute would produce more accepted errors unless the laboratory improves its definition of success.</p>
+<p>Use this laboratory throughout. Its persistent state includes capability, evidence, authority, resource capacity, and cash. Improvement means changing one of these without silently violating the others. The case connects the lecture's full stack to a tractable project: a narrow frontier can be the ability to solve and verify one class of problems more reliably.</p>
+<h2 id="1-the-stack-is-an-interdependent-production-system-1009">1. The stack is an interdependent production system <a href="https://www.youtube.com/watch?v=O5PfU_uDhS0&amp;t=609s">10:09</a></h2>
+<p>The lecture traverses capital, land and power, chips, cloud software, models, applications, and governance. AI changes demands at several layers simultaneously. A model researcher can be constrained by a power contract; a product team can be constrained by evaluation data; an infrastructure investor can be constrained by uncertain utilization.</p>
+<p><strong>Definition: bottleneck capacity.</strong> Suppose a completed task consumes resource amounts $a_i&gt;0$ and the available rate of each resource is $b_i$. A simple upper bound on task throughput is</p>
+<p>$$q\leq\min_i\frac{b_i}{a_i}.$$</p>
+<p>The minimizing resource is a bottleneck at that operating point. Increasing a nonbinding resource does not raise this bound. In a real system, buffering, routing, variable demand, and resource substitution complicate the picture, but the first question remains useful: which constraint is active?</p>
+<p><strong>Worked example.</strong> An inference service has compute capacity for 100 requests/second, network capacity for 150, and a required database dependency serving 60. Its maximum throughput is at most 60. Doubling compute alone changes nothing. Doubling database capacity moves the limit to 100, transferring the bottleneck to compute.</p>
+<p>This links the whole reading set: chapter 4 studies operational goodput, chapter 6 hardware balance, chapter 7 energy, chapter 9 product judgment, and chapters 10–12 data and interaction constraints.</p>
+<p>The throughput bound follows from conservation of each resource. At rate $q$, tasks consume $qa_i$ units of resource $i$ per second. Feasibility requires $qa_i\le b_i$ for every resource. Divide by each positive $a_i$ and take the smallest resulting upper bound. A queue can absorb a temporary mismatch, but it cannot sustain an average arrival rate above a required stage's capacity indefinitely.</p>
+<p>For the mechanics assistant, model generation may produce 100 solutions per hour while independent expert review handles ten. The binding resource for verified examples is review, not generation. A symbolic checker can increase effective review capacity only for properties it checks correctly. A faster but defective filter may increase accepted throughput while reducing the proportion of correct examples. The system needs both a rate model and an evidence-quality model.</p>
+<h2 id="2-the-training-pipeline-contains-different-optimization-problems-1407">2. The training pipeline contains different optimization problems <a href="https://www.youtube.com/watch?v=O5PfU_uDhS0&amp;t=847s">14:07</a></h2>
+<p>Midha describes pretraining, capability-focused intermediate training, post-training, and deployment feedback. These names are useful organizational categories; their exact boundaries differ across laboratories. The compute counts and cadences shown in the talk should not be treated as universal constants.</p>
+<p>Pretraining typically learns broad statistical structure. Supervised fine-tuning changes behavior using demonstrations. Reinforcement learning optimizes an outcome signal under a specified interaction or generation process. Deployment supplies observations only if collection, permissions, evaluation, and subsequent updates connect them back to learning.</p>
+<p>For a demonstration dataset $\mathcal D$ of input-response pairs $(x,y)$, let $y_t$ be response token $t$, $y_{&lt;t}$ preceding tokens, $\pi_\theta$ the token distribution with parameters $\theta$, and $m_t\in\{0,1\}$ a loss-selection mask. A masked supervised fine-tuning (SFT) objective is</p>
+<p>$$L_{\mathrm{SFT}}(\theta)=-\sum_{(x,y)\in\mathcal D}\sum_t m_t\log\pi_\theta(y_t\mid x,y_{&lt;t}),$$</p>
+<p>where $m_t$ selects tokens contributing to loss. A model can improve imitation of demonstrations without improving success on a new task distribution. <a href="https://arxiv.org/abs/2203.02155">InstructGPT</a> is a primary example connecting demonstrations, preferences, and post-training; it does not imply every deployed lab follows one identical recipe.</p>
+<p>In this objective, $x$ is an input problem, $y$ a target response, and $y_t$ its token at position $t$. The notation $y_{&lt;t}$ denotes preceding response tokens, while $\pi_\theta$ is the model's conditional token distribution. A binary mask $m_t$ specifies which tokens count toward training loss, for example excluding the input prompt. The negative logarithm penalizes assigning low probability to the demonstration's target token.</p>
+<p>For the mechanics laboratory, a demonstration can show a correct sequence of unit substitutions without proving that every copied reasoning pattern is valid. If the dataset systematically omits forces or boundary conditions, imitation can learn that omission. Keep evaluation problems separate, include unfamiliar numerical and structural variants, and distinguish answer correctness from matching one author's phrasing. Training loss measures fit to the selected demonstrations, not the validity of the selection process.</p>
+<h2 id="3-reinforcement-learning-needs-a-specified-environment-1910">3. Reinforcement learning needs a specified environment <a href="https://www.youtube.com/watch?v=O5PfU_uDhS0&amp;t=1150s">19:10</a></h2>
+<p>The pet-training analogy communicates rewards but hides most of the engineering. Define a finite-horizon Markov decision process by state set $\mathcal S$, action set $\mathcal A$, transition probabilities $P$, reward function $r$, initial-state distribution $\rho$, and horizon $H$ steps. The next-state distribution depends only on current state and action. A policy $\pi_\theta(a\mid s)$ gives action probabilities at state $s$. A trajectory $\tau$ is a sequence of states and actions. With discount factor $0\le\gamma\le1$, the objective is</p>
+<p>$$J(\theta)=\mathbb E_{\tau\sim\pi_\theta}\left[\sum_{t=0}^{H-1}\gamma^t r(s_t,a_t)\right],\quad0\leq\gamma\leq1.$$</p>
+<p>Let $R(\tau)$ denote the discounted reward sum above, and $\nabla_\theta$ the parameter gradient. If initial-state probabilities, transitions, and reward do not depend directly on $\theta$, the score-function identity yields</p>
+<p>$$\nabla_\theta J=\mathbb E\left[R(\tau)\sum_t\nabla_\theta\log\pi_\theta(a_t\mid s_t)\right].$$</p>
+<p>This explains why rewarded trajectories can increase their own probability under an update. It does not guarantee desirable behavior: the reward may be wrong, exploration may miss valuable actions, and the estimator can have high variance. Observations may be partial, requiring history or a belief state rather than the fully observed $s_t$ written here.</p>
+<p><strong>Historical qualification.</strong> Successful deep reinforcement learning predates the recent language-model era. <a href="https://arxiv.org/abs/1312.5602">Mnih et al. (2013)</a> learned Atari control from pixels. The novel claim in this lecture concerns the breadth and commercial usefulness of contemporary model post-training, not the first existence of effective RL.</p>
+<h3 id="deriving-the-score-function-identity">Deriving the score-function identity</h3>
+<p>Let $p_\theta(\tau)$ be the probability of a trajectory and let $R(\tau)$ denote its discounted total reward. For a finite trajectory space, $J=\sum_\tau p_\theta(\tau)R(\tau)$. Assume the reward function and environment do not directly depend on $\theta$, the policy is differentiable, and relevant trajectories have positive probability. Differentiate the sum and use $\nabla p=p\nabla\log p$ to obtain $\nabla J=\sum_\tau p_\theta(\tau)R(\tau)\nabla\log p_\theta(\tau)$.</p>
+<p>The trajectory probability factors into the initial-state probability and successive policy and transition probabilities. Taking a logarithm converts their product into a sum. Only the policy terms depend on $\theta$ under the assumptions, giving the displayed sum of policy log-probability gradients. For continuous spaces, analogous differentiation-under-the-integral conditions are needed. If reward depends directly on the same parameters, an additional derivative term cannot be ignored.</p>
+<p>The expression is an expectation, so sampled trajectories provide a stochastic gradient estimate. A single rewarded sample can increase its own probability, but that does not prove the reward tracks the user's goal. In the mechanics case, a reward of one for unit consistency can favor dimensionally valid nonsense. The environment and verifier define what is reinforced.</p>
+<h3 id="a-one-decision-check">A one-decision check</h3>
+<p>Consider two actions: produce an independently checked solution, with reward one, or produce an unchecked answer, with reward zero. This toy problem deliberately assumes the action label determines correctness. Let the first action's probability be $p=\sigma(\theta)$, with $\sigma(\theta)=1/(1+e^{-\theta})$. Expected reward is $J=p$ and its derivative is $p(1-p)$. The score-function expression gives the same result: the first action contributes probability $p$, reward one, and log-probability derivative $1-p$; the second contributes zero reward.</p>
+<pre><code>from math import exp
+
+
+def sigmoid(value):
+    if value &gt;= 0:
+        return 1 / (1 + exp(-value))
+    e = exp(value)
+    return e / (1 + e)
+
+
+theta, step = 0.4, 1e-5
+p = sigmoid(theta)
+analytic = p * (1 - p)
+finite_difference = (sigmoid(theta + step) - sigmoid(theta - step)) / (
+    2 * step
+)
+assert abs(analytic - finite_difference) &lt; 1e-9
+assert sigmoid(0) == 0.5
+assert sigmoid(-1000) == 0
+print(round(p, 6), round(analytic, 6))
+</code></pre>
+<p>Run <code>python labs/check_chapters.py 13</code>; it prints <code>0.598688 0.240261</code>. This pure calculation compares an analytic policy gradient with a central finite difference. It performs no model training or external actions. The stable sigmoid avoids overflow for large negative input. The check verifies calculus, not the difficult assumption that a real verifier reliably recognizes the desirable action.</p>
+<h2 id="4-context-has-several-meanings-2217">4. Context has several meanings <a href="https://www.youtube.com/watch?v=O5PfU_uDhS0&amp;t=1337s">22:17</a></h2>
+<p>The lecture uses “context” broadly: the environment where work happens, accessible evidence, task outcomes, and feedback that can improve a system. For engineering, distinguish four objects:</p>
+<table>
+<thead>
+<tr>
+<th>Object</th>
+<th>Function</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inference context</td>
+<td>Information available during one run</td>
+<td>Repository files or a customer request</td>
+</tr>
+<tr>
+<td>Evaluation environment</td>
+<td>Defines tasks and observable outcomes</td>
+<td>Resettable application with hidden tests</td>
+</tr>
+<tr>
+<td>Learning dataset</td>
+<td>Selected records used in an update</td>
+<td>Permissioned trajectories with validated outcomes</td>
+</tr>
+<tr>
+<td>Access rights</td>
+<td>Determines allowable use</td>
+<td>Customer-specific training and retention constraints</td>
+</tr>
+</tbody>
+</table>
+<p>These objects overlap but are not interchangeable. Seeing a repository during inference does not automatically grant permission to train on it. Collecting a successful trace does not prove that it generalizes. An environment can be richly instrumented yet have a defective success detector.</p>
+<p><strong>Worked verifier example.</strong> Suppose 30% of attempted solutions are actually correct. A verifier accepts 95% of correct solutions and mistakenly accepts 10% of incorrect ones. Among accepted solutions, the truly correct fraction is</p>
+<p>$$\frac{0.3(0.95)}{0.3(0.95)+0.7(0.10)}\approx0.803.$$</p>
+<p>Almost one fifth of accepted examples are wrong. Repeatedly training on them can reinforce the verifier's blind spots. Improving verification may therefore be more valuable than collecting additional unfiltered attempts.</p>
+<p>The numerator is the joint probability of correctness and acceptance, 0.285. Incorrect accepted attempts contribute 0.07, making total acceptance 0.355. Dividing the first by the total yields the correctness of the selected set. Increasing the number of attempts scales both populations; it does not improve their ratio when rates remain fixed. Reducing false acceptance to 0.01 lowers the incorrect contribution to 0.007 and raises selected-set correctness to about 97.6%.</p>
+<p>For the mechanics assistant, distinguish a unit checker from a complete verifier. An equation such as distance equals speed times time can have correct units while being inapplicable to a varying-speed trajectory. Add independently solved numerical cases, limiting checks, and an assessment of physical assumptions. Different checks can share blind spots, so their agreement is not automatically independent evidence.</p>
+<p>Keep the source of each accepted example and the reason for acceptance. If a verifier bug is found, the laboratory should be able to identify affected training examples rather than discarding all history or pretending the bug was local. This is a data-lineage requirement: the record connects an example to its input, generator version, checker version, and observed outcome. Lineage permits correction; it does not certify truth by itself.</p>
+<h2 id="5-sovereignty-is-a-bundle-of-controls-3032">5. Sovereignty is a bundle of controls <a href="https://www.youtube.com/watch?v=O5PfU_uDhS0&amp;t=1832s">30:32</a></h2>
+<p>The Mistral discussion connects sensitive environments with locally controlled models. “Sovereign” can refer to data location, legal jurisdiction, operational control, ownership of keys, dependence on suppliers, or ability to continue running without remote approval. A deployment must specify which requirement it satisfies.</p>
+<p><strong>Legal clarification.</strong> The lecture's CLOUD Act shorthand should not be read as unrestricted government access to any data on an American company's server. The <a href="https://www.justice.gov/d9/press-releases/attachments/2019/04/10/department_of_justice_cloud_act_white_paper_2019_04_10_final_0.pdf">U.S. Department of Justice's explanation</a> concerns providers subject to U.S. jurisdiction and data in their possession, custody, or control that is responsive to valid legal process, regardless of storage location. Jurisdiction and the applicable process still matter. This historical clarification is not a deployment-specific legal assessment.</p>
+<p>A useful threat model asks who can read plaintext, change the software, issue credentials, compel disclosure, or interrupt service. Local hardware addresses some dependencies; remote updates, telemetry, key custody, and support channels may introduce others. The relevant artifact is a control map, not a geographic label.</p>
+<p>For the mechanics laboratory, local inference can keep problem text off a remote model service, while a cloud backup may still receive the same text. A remotely managed package can change software behavior even when its data files remain on a local disk. Identify each data and control path, then map it to a requirement. “Local model” is one component description, not a complete assurance statement.</p>
+<p>Reproducibility and sovereignty also differ. A system may be reproducible from published code yet depend on externally controlled keys. Another may be locally controlled but difficult to reproduce because its training inputs are unavailable. State which property is needed and what evidence establishes it. This keeps institutional and technical claims from being collapsed into an attractive label.</p>
+<h2 id="6-feedback-and-revenue-loops-need-separate-accounting-3457">6. Feedback and revenue loops need separate accounting <a href="https://www.youtube.com/watch?v=O5PfU_uDhS0&amp;t=2097s">34:57</a></h2>
+<p>Midha proposes identifying a frontier, obtaining research compute, releasing something useful, and iterating from real use. He distinguishes organizational self-improvement from a claim that a single model autonomously becomes generally superintelligent. That distinction matters: a company can improve through people, tools, deployment, and revenue even when model generalization remains limited.</p>
+<p><strong>Independent dynamic model.</strong> Let quality be $q_t$, informative permissioned data $D_t$, and available cash $K_t$. One sketch is</p>
+<p>$$q_{t+1}=q_t+g(D_t,C_t)-\delta_t,$$
+$$K_{t+1}=K_t+R(q_t,u_t)-C_t-O_t.$$</p>
+<p>Here $C_t$ is training expenditure, $O_t$ operating expenditure, $u_t$ usage, and $\delta_t$ degradation or distribution shift. The first equation can improve while the second collapses: a technically successful model can still exhaust cash. Revenue can grow while evaluation quality stagnates if distribution or pricing improves. Two positive-looking curves do not identify the causal channel between them.</p>
+<p>The <a href="https://arxiv.org/abs/2203.15556">Chinchilla study</a> addresses training compute allocation, not a universal law from compute dollars to revenue. Product demand, competition, pricing, distribution, and execution intervene. Historical revenue multiples are valuation ratios, not physical conversion efficiencies.</p>
+<p>In the dynamic model, $g$ is an unspecified improvement function and $R$ a revenue function, not quantities guaranteed positive by notation. The quality state is a defined evaluation measure, and distribution shift can reduce it even with unchanged parameters. Cash is an accounting state. Training expenditure reduces cash now, while any later benefit depends on the actual learning and product response.</p>
+<p>Suppose the laboratory improves held-out correctness from 80% to 85% while spending half its remaining cash. That is technical progress, but the next experiment still requires a budget and a reason to expect further useful gain. Conversely, a new distribution channel can increase revenue without improving reasoning. To identify a learning loop, connect permissioned observations to a specific update and compare the resulting system on fresh tasks at a declared cost.</p>
+<p>Stopping is part of the system. Before a run, define the maximum experiments, cost per experiment, and evidence required to continue. A null result can justify changing the verifier or abandoning a weak hypothesis. A loop that always describes its latest output as progress has no meaningful stopping criterion and can spend indefinitely without learning.</p>
+<h2 id="7-compute-contracts-should-describe-useful-work-4307">7. Compute contracts should describe useful work <a href="https://www.youtube.com/watch?v=O5PfU_uDhS0&amp;t=2587s">43:07</a></h2>
+<p>The infrastructure portion argues that compute is difficult to substitute and forecast. A GPU-hour does not identify memory capacity, interconnect, numerical format, software support, reliability, or achieved throughput. Those differences can make nominally cheap capacity expensive for a particular task.</p>
+<p><strong>Definition: effective cost per validated result.</strong> If rental price is $p$ per hour, utilization is $u$, processing rate while productive is $r$ tasks per hour, and valid-result fraction is $v$, then</p>
+<p>$$c_{\mathrm{valid}}=\frac{p}{urv}.$$</p>
+<p><strong>Worked example.</strong> Provider A charges four units/hour, with $u=0.8$, $r=100$, and $v=0.95$. Cost per valid task is approximately 0.0526 units. Provider B charges three units/hour but has $u=0.5$, $r=80$, and $v=0.95$, giving 0.0789. The cheaper hourly quote is 50% more expensive per validated result in this hypothetical workload.</p>
+<p><a href="https://arxiv.org/abs/1911.02549">MLPerf Inference</a> and its <a href="https://github.com/mlcommons/inference_policies/blob/master/inference_rules.adoc">current benchmark rules</a> illustrate how workload, accuracy requirements, load, and latency can be specified together. They do not establish a universal exchange rate between all accelerators.</p>
+<p>The cost expression follows by counting validated results delivered during a billed hour. Productive time is fraction $u$ of the hour; productive rate is $r$; fraction $v$ passes the named validation. The denominator is therefore $urv$ results per billed hour. Dividing hourly price by it gives cost per result. Make sure utilization and validity do not subtract the same failed work twice.</p>
+<p>For provider A the denominator is 76 valid results per hour; for B it is 38. Their hourly prices differ by only 25%, but B delivers half as many validated results under the hypothetical measurements. This is why an accelerator-hour needs workload and quality qualifications to become a useful purchasing unit. The laboratory should include environment setup, interruption, and verification time in a consistent boundary rather than comparing a bare device quote with a complete service.</p>
+<h2 id="8-infrastructure-cycles-are-hypotheses-not-clocks-5028">8. Infrastructure cycles are hypotheses, not clocks <a href="https://www.youtube.com/watch?v=O5PfU_uDhS0&amp;t=3028s">50:28</a></h2>
+<p>Midha compares compute investment with earlier infrastructure expansions and argues for standards and institutions that improve access. The historical charts are illustrative; the talk itself says some were generated with AI assistance. These notes do not adopt their exact cycle lengths, current rental prices, wealth rankings, or aggregate capital-spending figures as verified data.</p>
+<p>Rising rental prices do not prove that hardware never depreciates. Scarcity rents can rise while physical equipment ages and its future cash-flow horizon shortens. Nor does price volatility disqualify a resource from being a commodity. Even electricity has location, delivery-time, congestion, and reliability differences; megawatts at one place and time are not freely interchangeable with megawatts everywhere.</p>
+<p><strong>Coordination extension.</strong> A common unit of compute could specify a workload bundle, quality floor, latency percentile, delivery period, and interruption policy. A settlement process would then determine whether contracted service was delivered. Standardization reduces ambiguity, but research workloads continue to evolve, limiting the longevity of any fixed benchmark basket.</p>
+<p>For a solo builder, the actionable contribution can be an open, reproducible workload with documented failure cases. That improves comparability without requiring ownership of a datacenter. The bottleneck framework is most useful when it produces a measurable experiment rather than a prediction that all bottlenecks will disappear.</p>
+<h2 id="limits">Limits</h2>
+<p>The resource bound assumes fixed requirements, the policy-gradient result assumes a specified environment and reward, and the cash model leaves its response functions empirical. A verifier's acceptance rate is not its correctness. The chapter's stack becomes useful when it identifies a measurable constraint and a falsifiable intervention, not when it turns a capital cycle into a guaranteed timetable.</p>
+<h2 id="exercises">Exercises</h2>
+<ol>
+<li>A pipeline has capacities 80, 120, and 50 tasks/second. With budget to add 40 to exactly one stage, what allocation maximizes throughput? What is the new bottleneck?</li>
+<li>In the verifier example, reduce the false-accept rate to 1%. What fraction of accepted results are correct?</li>
+<li>Derive the score-function gradient from $J=\sum_\tau p_\theta(\tau)R(\tau)$, stating the condition under which the reward has no additional direct parameter derivative.</li>
+<li>Propose a one-person frontier project. Define a narrow domain, baseline, permissioned data source, independent verifier, failure budget, compute limit, and a criterion for stopping.</li>
+</ol>
+<details>
+<summary>Solutions and discussion</summary>
+<ol>
+<li>Adding 40 to the first or second stage leaves the minimum at 50. Adding it to the third gives capacities 80, 120, and 90, making the minimum 80. The first stage becomes binding. This is the best allocation among the three allowed choices, but it is an upper bound on throughput if other overhead or dependencies are omitted.</li>
+<li>Correct accepted attempts remain $0.3(0.95)=0.285$. Incorrect accepted attempts fall to $0.7(0.01)=0.007$. Normalize by total acceptance 0.292 to obtain approximately 0.9760. Acceptance volume falls while selected-set quality rises. This illustrates why optimizing the number of accepted examples can conflict with optimizing reliable learning data.</li>
+<li>Differentiate $J=\sum_\tau p_\theta(\tau)R(\tau)$ with fixed reward, replace each probability derivative by $p_\theta\nabla\log p_\theta$, and recognize an expectation. Factor trajectory probability into initial state, policy choices, and environment transitions. Fixed initial and transition distributions contribute zero derivatives, leaving the sum of policy score terms. Parameter-dependent reward introduces an additional expected reward derivative; changing support or exchanging differentiation and integration also requires justification.</li>
+<li>Use a mechanics problem collection with explicit permission and an independently checked held-out set. Compare a fixed baseline with one controlled intervention, such as better retrieval of physical assumptions. Verify units, numerical cases, and reasoning separately. Set experiment and cost limits, record every result, and stop or change direction if new cases do not improve without increased unsupported claims. A unit checker is one component of the verifier, not permission to label every dimensionally valid answer correct.</li>
+</ol>
+</details>
+<h2 id="primary-references-and-coverage">Primary references and coverage</h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1312.5602">Mnih et al., Playing Atari with Deep Reinforcement Learning (2013)</a>.</li>
+<li><a href="https://arxiv.org/abs/2203.02155">Ouyang et al., InstructGPT (2022)</a>.</li>
+<li><a href="https://arxiv.org/abs/2203.15556">Hoffmann et al., Chinchilla (2022)</a>.</li>
+<li><a href="https://www.justice.gov/d9/press-releases/attachments/2019/04/10/department_of_justice_cloud_act_white_paper_2019_04_10_final_0.pdf">DOJ, CLOUD Act white paper (2019)</a>.</li>
+<li><a href="https://arxiv.org/abs/1911.02549">Reddi et al., MLPerf Inference Benchmark (2019)</a> and <a href="https://github.com/mlcommons/inference_policies/blob/master/inference_rules.adoc">official inference rules</a>.</li>
+</ul>
+<p>The chapter covers the stack, training pipeline, context and verification, sovereignty, recursive organizational improvement, compute economics, and standardization. Personal introductions and course logistics are compressed. Sovereignty precedes the organizational feedback loop, following the recording. No content is invented for the earlier class referenced by the speaker.</p><nav class="chapter-nav" aria-label="Chapter navigation"><a href="lecture-12.html">Previous chapter</a><a class="index" href="index.html">Reading guide</a><span></span></nav></main>
+<aside class="side" aria-label="On this page"><strong>On this page</strong><ul><li><a href="#1-the-stack-is-an-interdependent-production-system-1009">1. The stack is an interdependent production system 10:09</a></li><li><a href="#2-the-training-pipeline-contains-different-optimization-problems-1407">2. The training pipeline contains different optimization problems 14:07</a></li><li><a href="#3-reinforcement-learning-needs-a-specified-environment-1910">3. Reinforcement learning needs a specified environment 19:10</a></li><li><a href="#4-context-has-several-meanings-2217">4. Context has several meanings 22:17</a></li><li><a href="#5-sovereignty-is-a-bundle-of-controls-3032">5. Sovereignty is a bundle of controls 30:32</a></li><li><a href="#6-feedback-and-revenue-loops-need-separate-accounting-3457">6. Feedback and revenue loops need separate accounting 34:57</a></li><li><a href="#7-compute-contracts-should-describe-useful-work-4307">7. Compute contracts should describe useful work 43:07</a></li><li><a href="#8-infrastructure-cycles-are-hypotheses-not-clocks-5028">8. Infrastructure cycles are hypotheses, not clocks 50:28</a></li><li><a href="#limits">Limits</a></li><li><a href="#exercises">Exercises</a></li><li><a href="#primary-references-and-coverage">Primary references and coverage</a></li></ul></aside></div>
+<footer class="foot shell">Independent study notes · 25 September 2026 · <a href="sources.html">Source limitations</a> · <a href="index.html">Reading guide</a><br>Not official Stanford course material or endorsed by the speakers.</footer></body></html>
