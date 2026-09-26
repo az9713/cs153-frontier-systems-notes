@@ -2,9 +2,9 @@
 
 ### Independent transcript-grounded textbook and study companion
 
-**[Read the live textbook](https://az9713.github.io/stanford-cs153-frontier-systems/)** · **[Sources and research bibliography](https://az9713.github.io/stanford-cs153-frontier-systems/sources.html)** · **[Original YouTube playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rN447WKQ5oz_YdYbS74M5IA)**
+**[Read the live textbook](https://az9713.github.io/cs153-frontier-systems-notes/)** · **[Sources and research bibliography](https://az9713.github.io/cs153-frontier-systems-notes/sources.html)** · **[Original YouTube playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rN447WKQ5oz_YdYbS74M5IA)**
 
-[![Preview of the live textbook](assets/preview.png)](https://az9713.github.io/stanford-cs153-frontier-systems/)
+[![Preview of the live textbook](assets/preview.png)](https://az9713.github.io/cs153-frontier-systems-notes/)
 
 This study companion is based on **[Stanford University's CS 153: Frontier Systems, Spring 2026](https://cs153.stanford.edu/)**, taught by **Anjney Midha and Michael Abbott**. The course examines the AI stack, from energy and silicon through models, products, organizations, and deployment. Stanford and the original speakers deserve credit for the course, conversations, and source recordings.
 
@@ -28,19 +28,19 @@ GitHub displays source HTML in the repository. The **Read** links below open the
 
 | Chapter | Topic and speaker | Live notes | Source recording |
 | --- | --- | --- | --- |
-| 01 | Building the frontier ecosystem — Satya Nadella | [Read](https://az9713.github.io/stanford-cs153-frontier-systems/lecture-01.html) | [YouTube](https://www.youtube.com/watch?v=d0Pfu6B7gIM) |
-| 02 | Scale, AGI, and the future — Sam Altman | [Read](https://az9713.github.io/stanford-cs153-frontier-systems/lecture-02.html) | [YouTube](https://www.youtube.com/watch?v=F_7M4Hc-usM) |
-| 03 | Resilience — Joe Sullivan | [Read](https://az9713.github.io/stanford-cs153-frontier-systems/lecture-03.html) | [YouTube](https://www.youtube.com/watch?v=g50FHC-PzK8) |
-| 04 | Delivering value per gigawatt — Amin Vahdat | [Read](https://az9713.github.io/stanford-cs153-frontier-systems/lecture-04.html) | [YouTube](https://www.youtube.com/watch?v=VeTqsCpcDgg) |
-| 05 | The AI-native company — Garry Tan and Diana Hu | [Read](https://az9713.github.io/stanford-cs153-frontier-systems/lecture-05.html) | [YouTube](https://www.youtube.com/watch?v=Lri2LNYtERM) |
-| 06 | Compute and co-design — Jensen Huang | [Read](https://az9713.github.io/stanford-cs153-frontier-systems/lecture-06.html) | [YouTube](https://www.youtube.com/watch?v=tsQB0n0YV3k) |
-| 07 | Energy — Scott Nolan | [Read](https://az9713.github.io/stanford-cs153-frontier-systems/lecture-07.html) | [YouTube](https://www.youtube.com/watch?v=wisccQYTRQc) |
-| 08 | Venture capital — Ben Horowitz | [Read](https://az9713.github.io/stanford-cs153-frontier-systems/lecture-08.html) | [YouTube](https://www.youtube.com/watch?v=B8NvdfssGac) |
-| 09 | Product management in the AI era — Nikhyl Singhal | [Read](https://az9713.github.io/stanford-cs153-frontier-systems/lecture-09.html) | [YouTube](https://www.youtube.com/watch?v=BQrJ4lHAjhc) |
-| 10 | Unified intelligence — Amit Jain | [Read](https://az9713.github.io/stanford-cs153-frontier-systems/lecture-10.html) | [YouTube](https://www.youtube.com/watch?v=6nUl_w5W9Wk) |
-| 11 | Visual intelligence — Andreas Blattmann | [Read](https://az9713.github.io/stanford-cs153-frontier-systems/lecture-11.html) | [YouTube](https://www.youtube.com/watch?v=CBaLU0dDEY8) |
-| 12 | Voice systems — Mati Staniszewski | [Read](https://az9713.github.io/stanford-cs153-frontier-systems/lecture-12.html) | [YouTube](https://www.youtube.com/watch?v=vfF011ko89o) |
-| 13 | Frontier systems — Anjney Midha | [Read](https://az9713.github.io/stanford-cs153-frontier-systems/lecture-13.html) | [YouTube](https://www.youtube.com/watch?v=O5PfU_uDhS0) |
+| 01 | Building the frontier ecosystem — Satya Nadella | [Read](https://az9713.github.io/cs153-frontier-systems-notes/lecture-01.html) | [YouTube](https://www.youtube.com/watch?v=d0Pfu6B7gIM) |
+| 02 | Scale, AGI, and the future — Sam Altman | [Read](https://az9713.github.io/cs153-frontier-systems-notes/lecture-02.html) | [YouTube](https://www.youtube.com/watch?v=F_7M4Hc-usM) |
+| 03 | Resilience — Joe Sullivan | [Read](https://az9713.github.io/cs153-frontier-systems-notes/lecture-03.html) | [YouTube](https://www.youtube.com/watch?v=g50FHC-PzK8) |
+| 04 | Delivering value per gigawatt — Amin Vahdat | [Read](https://az9713.github.io/cs153-frontier-systems-notes/lecture-04.html) | [YouTube](https://www.youtube.com/watch?v=VeTqsCpcDgg) |
+| 05 | The AI-native company — Garry Tan and Diana Hu | [Read](https://az9713.github.io/cs153-frontier-systems-notes/lecture-05.html) | [YouTube](https://www.youtube.com/watch?v=Lri2LNYtERM) |
+| 06 | Compute and co-design — Jensen Huang | [Read](https://az9713.github.io/cs153-frontier-systems-notes/lecture-06.html) | [YouTube](https://www.youtube.com/watch?v=tsQB0n0YV3k) |
+| 07 | Energy — Scott Nolan | [Read](https://az9713.github.io/cs153-frontier-systems-notes/lecture-07.html) | [YouTube](https://www.youtube.com/watch?v=wisccQYTRQc) |
+| 08 | Venture capital — Ben Horowitz | [Read](https://az9713.github.io/cs153-frontier-systems-notes/lecture-08.html) | [YouTube](https://www.youtube.com/watch?v=B8NvdfssGac) |
+| 09 | Product management in the AI era — Nikhyl Singhal | [Read](https://az9713.github.io/cs153-frontier-systems-notes/lecture-09.html) | [YouTube](https://www.youtube.com/watch?v=BQrJ4lHAjhc) |
+| 10 | Unified intelligence — Amit Jain | [Read](https://az9713.github.io/cs153-frontier-systems-notes/lecture-10.html) | [YouTube](https://www.youtube.com/watch?v=6nUl_w5W9Wk) |
+| 11 | Visual intelligence — Andreas Blattmann | [Read](https://az9713.github.io/cs153-frontier-systems-notes/lecture-11.html) | [YouTube](https://www.youtube.com/watch?v=CBaLU0dDEY8) |
+| 12 | Voice systems — Mati Staniszewski | [Read](https://az9713.github.io/cs153-frontier-systems-notes/lecture-12.html) | [YouTube](https://www.youtube.com/watch?v=vfF011ko89o) |
+| 13 | Frontier systems — Anjney Midha | [Read](https://az9713.github.io/cs153-frontier-systems-notes/lecture-13.html) | [YouTube](https://www.youtube.com/watch?v=O5PfU_uDhS0) |
 
 For a conceptual progression, start with chapter 13; continue through 11, 12, and 10 for models and systems; 4, 6, and 7 for infrastructure; 5, 8, and 9 for building and organizations; then 1, 2, and 3 for ecosystem, scaling, and resilience. Basic linear algebra, probability, and calculus are useful prerequisites.
 
@@ -50,7 +50,7 @@ The full available English transcript text was read for each recording. Ten capt
 
 Timestamps locate relevant lecture topics. Slides and visual demonstrations were not independently inspected continuously. Personal anecdotes and repetitive discussion are compressed. Private commercial figures and forecasts are not treated as independently established facts. The earliest listed recording refers to an earlier class outside this snapshot.
 
-The [source map](https://az9713.github.io/stanford-cs153-frontier-systems/sources.html) documents provenance, recording segments, research references, and qualifications. [The manifest](sources/manifest.json) preserves source origins and transcript-cache hashes. Raw captions, local research caches, backups, and internal working audits are excluded from this repository. The original recordings and third-party references remain the property of their respective rights holders; attribution is not a grant of rights to those materials. The bundled MathJax license is retained in [assets/mathjax-LICENSE](assets/mathjax-LICENSE).
+The [source map](https://az9713.github.io/cs153-frontier-systems-notes/sources.html) documents provenance, recording segments, research references, and qualifications. [The manifest](sources/manifest.json) preserves source origins and transcript-cache hashes. Raw captions, local research caches, backups, and internal working audits are excluded from this repository. The original recordings and third-party references remain the property of their respective rights holders; attribution is not a grant of rights to those materials. The bundled MathJax license is retained in [assets/mathjax-LICENSE](assets/mathjax-LICENSE).
 
 ## Read offline, rebuild, and check
 
